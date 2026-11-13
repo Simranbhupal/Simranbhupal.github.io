@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Simran — AI &amp; ML Engineer</title>
+<style>
+:root{--bg:#f8fafc;--card:rgba(255,255,255,.8);--text:#0f172a;--muted:#475569;--line:#dbe3ee;--a:#0d9488;--a2:#6366f1;--chip:rgba(13,148,136,.12);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#050816;--card:rgba(15,23,42,.72);--text:#e2e8f0;--muted:#94a3b8;--line:#1e293b;--a:#22d3ee;--a2:#a78bfa;--chip:rgba(34,211,238,.12);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#050816;--card:rgba(15,23,42,.72);--text:#e2e8f0;--muted:#94a3b8;--line:#1e293b;--a:#22d3ee;--a2:#a78bfa;--chip:rgba(34,211,238,.12);color-scheme:dark}
+*{box-sizing:border-box}html{scroll-behavior:smooth;height:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;overflow-x:hidden}
+.w{max-width:960px;margin:0 auto;padding:0 20px}
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;overflow:hidden}
+#net{position:absolute;inset:0;width:100%;height:100%}
+.hero .w{position:relative;z-index:1;width:100%}
+.live{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);border:1px solid var(--line);background:var(--card);padding:5px 12px;border-radius:999px}
+.live i{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 0 #22c55e;animation:pl 2s infinite}
+@keyframes pl{70%{box-shadow:0 0 0 8px transparent}}
+.hi{margin:28px 0 0;color:var(--a);font-family:ui-monospace,Menlo,Consolas,monospace;font-size:15px}
+h1{font-size:clamp(3rem,13vw,7rem);line-height:1;margin:6px 0 10px;letter-spacing:-.03em;background:linear-gradient(90deg,var(--a),var(--a2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.role{font-size:clamp(1.3rem,4vw,2rem);font-weight:600;margin:0}
+.type{min-height:1.8em;color:var(--muted);font-family:ui-monospace,Menlo,Consolas,monospace;margin:8px 0 28px}
+.type:after{content:"▍";color:var(--a);animation:bl 1s steps(1) infinite}@keyframes bl{50%{opacity:0}}
+.links{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid var(--line);background:var(--card);color:var(--text);backdrop-filter:blur(8px);transition:.25s}
+.btn:hover{border-color:var(--a);transform:translateY(-2px);box-shadow:0 6px 24px -8px var(--a)}
+.btn.p{background:linear-gradient(90deg,var(--a),var(--a2));color:#fff;border:0}
+.cue{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);z-index:1;color:var(--muted);font-size:12px;text-align:center;letter-spacing:.15em;text-transform:uppercase}
+.cue:after{content:"";display:block;width:1px;height:28px;margin:8px auto 0;background:linear-gradient(var(--a),transparent);animation:dn 1.8s infinite}@keyframes dn{50%{transform:translateY(8px)}}
+section{padding:80px 0}
+.lab{font-family:ui-monospace,Menlo,Consolas,monospace;color:var(--a);font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+h2{font-size:clamp(1.8rem,5vw,2.6rem);margin:4px 0 28px;letter-spacing:-.02em}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;backdrop-filter:blur(8px);transition:.3s}
+.card:hover{border-color:var(--a);box-shadow:0 10px 40px -18px var(--a)}
+.two{display:grid;grid-template-columns:1.4fr 1fr;gap:28px;align-items:start}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.stat{text-align:center;padding:18px 10px}
+.stat b{display:block;font-size:1.9rem;background:linear-gradient(90deg,var(--a),var(--a2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat span{font-size:13px;color:var(--muted)}
+.tl{position:relative;padding-left:30px;border-left:2px solid var(--line);margin-left:6px}
+.tl .card{margin-bottom:26px;position:relative}
+.tl .card:before{content:"";position:absolute;left:-39px;top:26px;width:14px;height:14px;border-radius:50%;background:var(--a);box-shadow:0 0 0 5px var(--chip),0 0 18px var(--a)}
+.row{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+h3{margin:0;font-size:1.1rem}.meta{color:var(--muted);font-size:14px}
+.card ul{margin:12px 0;padding-left:20px;color:var(--muted)}.card li{margin-bottom:4px}
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:14px 0 4px;font-size:13px}
+.flow b{font-weight:600;padding:6px 11px;border-radius:8px;border:1px solid var(--a);background:var(--chip)}
+.flow i{font-style:normal;color:var(--a)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.chips span{background:var(--chip);font-size:12.5px;padding:3px 10px;border-radius:999px}
+.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.g .card p{margin:6px 0 0;color:var(--muted);font-size:15px}
+.cert{display:flex;gap:14px;align-items:flex-start}.cert em{font-style:normal;font-size:1.7rem;line-height:1}
+.cert h3{font-size:1rem}.cert p{margin:2px 0 0;color:var(--muted);font-size:14px}
+footer{text-align:center;padding:70px 0 50px;border-top:1px solid var(--line)}
+footer h2{margin-bottom:10px}footer p{color:var(--muted);margin:0 0 24px}
+footer .links{justify-content:center}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s}.rv.in{opacity:1;transform:none}
+@media (max-width:720px){.two{grid-template-columns:1fr}section{padding:60px 0}}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}*{animation:none!important}}
+</style>
+</head>
+<body>
+<header class="hero">
+<canvas id="net"></canvas>
+<div class="w">
+<span class="live"><i></i>Open to entry-level AI/ML roles</span>
+<p class="hi">&gt; hello_world(), I’m</p>
+<h1>SIMRAN</h1>
+<p class="role">AI &amp; ML Engineer</p>
+<p class="type" id="t"></p>
+<div class="links">
+<a class="btn p" href="mailto:bhupal.simran26@gmail.com">✉ bhupal.simran26@gmail.com</a>
+<a class="btn" href="https://www.linkedin.com/in/simran-175078289" target="_blank" rel="noopener">in&nbsp; LinkedIn</a>
+<span class="btn">📍 Mohali, India</span>
+</div>
+</div>
+<div class="cue">Scroll</div>
+</header>
+
+<main class="w">
+<section id="about" class="rv">
+<div class="lab">01 / About</div><h2>About me</h2>
+<div class="two">
+<div>
+<p>I’m a B.Tech CSE (AI &amp; ML) graduate who builds applied AI systems across LLMs, NLP and computer vision. Through three internships at the NIT Jalandhar incubator and IIT Mandi’s Centre for Artificial Intelligence and Robotics, I’ve built a multilingual voice system for children with autism, a vision-language navigation framework for robots, and a YOLO-based railway fault detector.</p>
+<p>I like taking ideas from prototype to something that runs in real time on limited resources. I’m also a DGCA-certified remote pilot, which pairs well with my interest in robotics.</p>
+<p class="meta">B.Tech, Jawaharlal Nehru Government Engineering College, Sundernagar (HPTU), 2022–2026</p>
+</div>
+<div class="stats">
+<div class="card stat"><b>3</b><span>Internships</span></div>
+<div class="card stat"><b>8.63</b><span>B.Tech CGPA</span></div>
+<div class="card stat"><b>346</b><span>GATE (CS) score</span></div>
+<div class="card stat"><b>1 of 44</b><span>Japan Tour 2026 selectees</span></div>
+</div>
+</div>
+</section>
+
+<section id="experience">
+<div class="lab rv">02 / Experience</div><h2 class="rv">Internship journey</h2>
+<div class="tl">
+<div class="card rv">
+<div class="row"><h3>AI Intern · NIT Jalandhar</h3><span class="meta">Jan – Jun 2026</span></div>
+<div class="meta">iRoots Data &amp; Publishing (NITJ Technology Business Incubator)</div>
+<div class="flow"><b>Child’s voice</b><i>→</i><b>LLM</b><i>→</i><b>TTS</b><i>→</i><b>Scheduler agent</b><i>→</i><b>Game</b></div>
+<ul>
+<li>Built a multilingual (Hindi, English, Punjabi) voice interaction system for a serious game for children with ASD.</li>
+<li>Designed a modular pipeline (NLP, TTS, scheduler agents) for adaptive session management and pacing.</li>
+<li>Benchmarked LLMs on latency and accuracy and chose Gemini 2.5, cutting response time by about 5 seconds.</li>
+</ul>
+<div class="chips"><span>Python</span><span>LLM</span><span>TTS</span><span>Multilingual NLP</span><span>Agentic AI</span></div>
+</div>
+<div class="card rv">
+<div class="row"><h3>Research Intern · IIT Mandi, CARI</h3><span class="meta">Jun – Jul 2025</span></div>
+<div class="meta">Vision-Language Navigation framework</div>
+<div class="flow"><b>Instruction</b><i>→</i><b>LLM</b><i>→</i><b>Navigation logic (ROS2/Nav2)</b><i>→</i><b>Simulated robot</b></div>
+<ul>
+<li>Developed a framework where agents follow natural-language instructions using LLMs.</li>
+<li>Tested the agent in a simulated house environment, where it completed navigation tasks successfully.</li>
+<li>Laid groundwork for real-robot deployment.</li>
+</ul>
+<div class="chips"><span>Python</span><span>LLM</span><span>ROS2</span><span>Nav2</span><span>Human-Robot Interaction</span></div>
+</div>
+<div class="card rv">
+<div class="row"><h3>Research Intern · IIT Mandi, CARI</h3><span class="meta">Jun 2024</span></div>
+<div class="meta">Railway track defect detection</div>
+<div class="flow"><b>Track image</b><i>→</i><b>Preprocess + augment</b><i>→</i><b>YOLOv5</b><i>→</i><b>Fault boxes</b></div>
+<ul>
+<li>Trained a YOLOv5 model to detect faults such as track breakage and screw defects.</li>
+<li>Preprocessed and augmented the labelled train/test dataset.</li>
+<li>Evaluated on the test set, correctly localising faults in unseen images.</li>
+</ul>
+<div class="chips"><span>YOLOv5</span><span>OpenCV</span><span>CNN</span><span>Deep Learning</span></div>
+</div>
+</div>
+</section>
+
+<section id="projects">
+<div class="lab rv">03 / Projects</div><h2 class="rv">Things I’ve built</h2>
+<div class="g">
+<div class="card rv"><h3>Automated Interview Coach</h3>
+<div class="flow"><b>Resume</b><i>→</i><b>NLP parse</b><i>→</i><b>LLM questions</b><i>→</i><b>Feedback</b></div>
+<p>Parses resumes, generates tailored interview questions, and gives feedback using speech and text emotion analysis.</p>
+<div class="chips"><span>Python</span><span>NLP</span><span>LLM</span></div></div>
+<div class="card rv"><h3>Heart Attack Prediction System</h3>
+<div class="flow"><b>Medical report</b><i>→</i><b>OCR</b><i>→</i><b>XGBoost</b><i>→</i><b>Risk</b></div>
+<p>Extracts data from medical reports via OCR and predicts risk with XGBoost on image and ECG data.</p>
+<div class="chips"><span>Python</span><span>ML/DL</span><span>OCR</span><span>XGBoost</span></div></div>
+</div>
+</section>
+
+<section id="skills">
+<div class="lab rv">04 / Skills</div><h2 class="rv">Tech stack</h2>
+<div class="g">
+<div class="card rv"><h3>Languages</h3><div class="chips"><span>Python</span><span>C</span><span>C++</span><span>SQL</span></div></div>
+<div class="card rv"><h3>AI &amp; ML</h3><div class="chips"><span>ML &amp; DL</span><span>NLP</span><span>Generative AI</span><span>LLMs</span><span>LangChain</span><span>OCR</span><span>PyTorch</span><span>TensorFlow</span><span>Hugging Face</span></div></div>
+<div class="card rv"><h3>Computer Vision</h3><div class="chips"><span>CNN</span><span>OpenCV</span><span>Object Detection</span><span>YOLOv5</span><span>FaceNet</span></div></div>
+<div class="card rv"><h3>Robotics</h3><div class="chips"><span>Linux</span><span>ROS2</span><span>Nav2</span><span>SLAM Toolbox</span></div></div>
+<div class="card rv"><h3>Tools</h3><div class="chips"><span>Pandas</span><span>NumPy</span><span>Scikit-learn</span><span>Matplotlib</span><span>Git</span><span>Jupyter</span><span>Colab</span><span>VS Code</span></div></div>
+</div>
+</section>
+
+<section id="certs">
+<div class="lab rv">05 / Certifications &amp; Achievements</div><h2 class="rv">Recognition</h2>
+<div class="g">
+<div class="card cert rv"><em>🇯🇵</em><div><h3>Japan International Exposure Tour 2026</h3><p>Selected among 44 students statewide by the Govt. of Himachal Pradesh: JAXA, Kyocera, space tech and robotics.</p></div></div>
+<div class="card cert rv"><em>🚁</em><div><h3>DGCA Remote Pilot</h3><p>Approved Remote Pilot Training, Adani Skill Development Centre.</p></div></div>
+<div class="card cert rv"><em>🏆</em><div><h3>Smart India Hackathon</h3><p>Participant.</p></div></div>
+<div class="card cert rv"><em>🐍</em><div><h3>Python</h3><p>IIT Bombay.</p></div></div>
+<div class="card cert rv"><em>🧠</em><div><h3>Deep Learning</h3><p>SCEE, IIT Mandi.</p></div></div>
+<div class="card cert rv"><em>🤖</em><div><h3>AI &amp; ML using Python</h3><p>Miraz’24, IIT Mandi.</p></div></div>
+<div class="card cert rv"><em>🛸</em><div><h3>Bootcamp on Drone Technology</h3><p>CARI, IIT Mandi.</p></div></div>
+<div class="card cert rv"><em>👤</em><div><h3>Face Recognition using FaceNet</h3><p>Udemy.</p></div></div>
+</div>
+</section>
+
+<footer class="rv">
+<h2>Let’s build something</h2>
+<p>I’m looking for an entry-level AI/ML role. Say hello.</p>
+<div class="links"><a class="btn p" href="mailto:bhupal.simran26@gmail.com">✉ Email me</a><a class="btn" href="https://www.linkedin.com/in/simran-175078289" target="_blank" rel="noopener">in&nbsp; LinkedIn</a></div>
+</footer>
+</main>
+
+<script>
+(function(){
+var rm=matchMedia("(prefers-reduced-motion: reduce)").matches;
+var c=document.getElementById("net"),x=c.getContext("2d"),W,H,P=[],m={x:-999,y:-999};
+function col(){return getComputedStyle(document.documentElement).getPropertyValue("--a").trim()||"#22d3ee"}
+function size(){var r=c.parentElement.getBoundingClientRect(),d=devicePixelRatio||1;W=r.width;H=r.height;c.width=W*d;c.height=H*d;x.setTransform(d,0,0,d,0,0);
+P=[];for(var i=0,n=Math.min(80,Math.floor(W*H/13000));i<n;i++)P.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.45,vy:(Math.random()-.5)*.45})}
+function draw(){x.clearRect(0,0,W,H);var k=col();x.fillStyle=k;x.strokeStyle=k;
+for(var i=0;i<P.length;i++){var p=P[i];if(!rm){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1}
+x.globalAlpha=.7;x.beginPath();x.arc(p.x,p.y,2,0,6.3);x.fill();
+for(var j=i+1;j<P.length;j++){var q=P[j],d=Math.hypot(p.x-q.x,p.y-q.y);if(d<130){x.globalAlpha=(1-d/130)*.35;x.beginPath();x.moveTo(p.x,p.y);x.lineTo(q.x,q.y);x.stroke()}}
+var dm=Math.hypot(p.x-m.x,p.y-m.y);if(dm<170){x.globalAlpha=(1-dm/170)*.6;x.beginPath();x.moveTo(p.x,p.y);x.lineTo(m.x,m.y);x.stroke()}}
+x.globalAlpha=1;if(!rm)requestAnimationFrame(draw)}
+c.parentElement.addEventListener("pointermove",function(e){var r=c.getBoundingClientRect();m.x=e.clientX-r.left;m.y=e.clientY-r.top});
+addEventListener("resize",function(){size();if(rm)draw()});size();draw();
+var T=["LLMs · NLP · Computer Vision · Robotics","Multilingual voice AI for children","Vision-language navigation for robots","From prototype to real-time deployment"],ti=0,ci=0,del=false,el=document.getElementById("t");
+function tick(){var s=T[ti];if(rm){el.textContent=s;return}
+ci+=del?-1:1;el.textContent=s.slice(0,ci);var w=del?25:55;
+if(!del&&ci===s.length){del=true;w=1600}else if(del&&ci===0){del=false;ti=(ti+1)%T.length;w=300}setTimeout(tick,w)}tick();
+var rs=document.querySelectorAll(".rv");
+if("IntersectionObserver" in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.12});rs.forEach(function(r){io.observe(r)})}else{rs.forEach(function(r){r.classList.add("in")})}
+})();
+</script>
+</body>
+</html>
